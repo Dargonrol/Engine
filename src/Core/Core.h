@@ -8,9 +8,9 @@
 
 namespace Core {
 
-	enum Error
+	enum class Error : uint8_t
 	{
-		CORE_SUCCESS,
+		CORE_SUCCESS = 0,
 		CORE_FATAL,
 		CORE_CRITICAL,
 		CORE_ERROR
