@@ -4,6 +4,6 @@
 [submodule "Vendor/spdlog"]
 	path = Vendor/spdlog
 	url = https://github.com/gabime/spdlog
-[submodule "Vendor/eigen"]
-	path = Vendor/eigen
+[submodule "Vendor/Eigen"]
+	path = Vendor/Eigen
 	url = https://gitlab.com/libeigen/eigen.git
