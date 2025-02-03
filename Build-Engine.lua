@@ -14,7 +14,9 @@ project (CoreName)
    {
       "src",
 	  -- additional libs
-	  ("../" .. CoreName .. "/Vendor/spdlog/include")
+	  ("../" .. CoreName .. "/Vendor/spdlog/include"),
+	  ("../" .. CoreName .. "/Vendor/bgfx/include"),
+	  ("../" .. CoreName .. "/Vendor/Eigen/Eigen")
    }
 
    targetdir ("../bin/" .. OutputDir .. "/%{prj.name}")
