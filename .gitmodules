@@ -1,0 +1,9 @@
+[submodule "Vendor/bgfx"]
+	path = Vendor/bgfx
+	url = https://github.com/bkaradzic/bgfx
+[submodule "Vendor/spdlog"]
+	path = Vendor/spdlog
+	url = https://github.com/gabime/spdlog
+[submodule "Vendor/eigen"]
+	path = Vendor/eigen
+	url = https://gitlab.com/libeigen/eigen.git
