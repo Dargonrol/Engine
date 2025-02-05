@@ -41,15 +41,17 @@ namespace Core
 		{
 			return getCategoryFlags() & category;
 		}
-
-
+		
+		  
 		class EventDispatcher
 		{
+			template<typename T>
+			using EventFn = std::function<bool(T&)>;
 		public:
 			EventDispatcher(Event& event) : m_event(event) {}
 
 			template<typename T>
-			bool Dispatch(const T& func)
+			bool Dispatch(EventFn<T> func)
 			{
 				if (m_event.getEventType() == T::GetStaticType())
 				{
@@ -62,11 +64,11 @@ namespace Core
 		private:
 			Event& m_event;
 		};
-
-		inline std::ostream& operator<<(std::ostream& os, const Event& e) const
-		{
-			return os << e.toString();
-		}
 	};
+
+	inline std::ostream& operator<<(std::ostream& os, const Event& e)
+	{
+		return os << e.toString();
+	}
 }
 

@@ -1,9 +1,9 @@
 project (CoreName)
-   kind "SharedLib"
+   kind "StaticLib"
    language "C++"
    cppdialect "C++20"
    targetdir "bin/%{cfg.buildcfg}"
-   staticruntime "Off"
+   staticruntime "on"
    
    pchheader "pch.h"
    pchsource "src/pch.cpp"
@@ -14,9 +14,9 @@ project (CoreName)
    {
       "src",
 	  -- additional libs
-	  ("../" .. CoreName .. "/Vendor/spdlog/include"),
-	  ("../" .. CoreName .. "/Vendor/bgfx/include"),
-	  ("../" .. CoreName .. "/Vendor/Eigen/Eigen")
+	  "../Vendor/spdlog/include",
+	  "../Vendor/bgfx/include",
+	  "../Vendor/Eigen"
    }
 
    targetdir ("../bin/" .. OutputDir .. "/%{prj.name}")
@@ -60,10 +60,3 @@ project (CoreName)
        runtime "Release"
        optimize "On"
        symbols "Off"
-
-	filter "system:windows"
-			postbuildcommands
-				{
-					('{COPY} "%{wks.location}/bin/%{cfg.system}-%{cfg.architecture}/%{cfg.buildcfg}/' .. CoreName .. '/' .. CoreName .. '.dll" ../bin/' .. OutputDir .. "/%{prj.name}")
-				}
-		   

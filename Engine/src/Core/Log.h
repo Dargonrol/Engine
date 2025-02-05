@@ -1,11 +1,10 @@
 #pragma once
 
-#include "Core.h"
 #include "spdlog/spdlog.h"
 
 namespace Core {
 
-	class CORE_API Log
+	class Log
 	{
 	public:
 		static void Init();

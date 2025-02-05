@@ -4,7 +4,7 @@
 
 namespace Core
 {
-	class CORE_API Layer
+	class Layer
 	{
 	public:
 		Layer(const std::string& name = "Layer") : m_name(name) {}

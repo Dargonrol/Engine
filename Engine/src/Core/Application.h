@@ -4,7 +4,7 @@
 
 namespace Core {
 
-	class CORE_API Application
+	class Application
 	{
 	public:
 

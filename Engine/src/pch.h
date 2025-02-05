@@ -6,7 +6,7 @@
 #include <algorithm>
 #include <functional>
 
-#include "Eigen"
+#include <Eigen/Dense>
 #include <sstream>
 #include <vector>
 #include <unordered_map>

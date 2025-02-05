@@ -14,7 +14,7 @@ namespace Core
 		WindowProperties(std::string title = "Untitled", uint32_t width = 400, uint32_t height = 400) : title(std::move(title)), width(width), height(height) {}
 	};
 
-	class CORE_API Window
+	class Window
 	{
 	public:
 		virtual ~Window() {}
