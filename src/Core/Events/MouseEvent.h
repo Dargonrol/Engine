@@ -10,7 +10,7 @@ namespace Core
 	public:
 		MouseCode getMouseButton() const { return m_Button; }
 
-		virtual uint8_t getCategoryFlags() const override { return EventCategory::Mouse | EventCategory::MouseButton | EventCategory::Input; }
+		virtual uint8_t getCategoryFlags() const override { return EventCategory::EventMouse | EventCategory::EventMouseButton | EventCategory::EventInput; }
 
 	protected:
 		MouseButtonEvent(const MouseCode button) : m_Button(button) {}
@@ -74,7 +74,7 @@ namespace Core
 		virtual EventType getEventType() const override { return getStaticType(); }
 		virtual const char* getName() const override { return "MouseMovedEvent"; }
 
-		virtual uint8_t getCategoryFlags() const override { return EventCategory::Mouse | EventCategory::Input; }
+		virtual uint8_t getCategoryFlags() const override { return EventCategory::EventMouse | EventCategory::EventInput; }
 
 	private:
 		float m_mouseX, m_mouseY;
@@ -99,7 +99,7 @@ namespace Core
 		virtual EventType getEventType() const override { return getStaticType(); }
 		virtual const char* getName() const override { return "MouseScrolledEvent"; }
 
-		virtual uint8_t getCategoryFlags() const override { return EventCategory::Mouse | EventCategory::Input; }
+		virtual uint8_t getCategoryFlags() const override { return EventCategory::EventMouse | EventCategory::EventInput; }
 
 	private:
 		float m_xOffset, m_yOffset;

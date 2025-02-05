@@ -60,3 +60,10 @@ project (CoreName)
        runtime "Release"
        optimize "On"
        symbols "Off"
+
+	filter "system:windows"
+			postbuildcommands
+				{
+					('{COPY} "%{wks.location}/bin/%{cfg.system}-%{cfg.architecture}/%{cfg.buildcfg}/' .. CoreName .. '/' .. CoreName .. '.dll" ../bin/' .. OutputDir .. "/%{prj.name}")
+				}
+		   

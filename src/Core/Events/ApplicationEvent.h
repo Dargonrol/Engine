@@ -13,7 +13,7 @@ namespace Core
 		virtual EventType getEventType() const override { return getStaticType(); }
 		virtual const char* getName() const override { return "WindowCloseEvent"; }
 
-		virtual uint8_t getCategoryFlags() const override { return EventCategory::Window; }
+		virtual uint8_t getCategoryFlags() const override { return EventCategory::EventWindow; }
 	};
 
 
@@ -36,7 +36,7 @@ namespace Core
 		virtual EventType getEventType() const override { return getStaticType(); }
 		virtual const char* getName() const override { return "WindowResizeEvent"; }
 
-		virtual uint8_t getCategoryFlags() const override { return EventCategory::Window; }
+		virtual uint8_t getCategoryFlags() const override { return EventCategory::EventWindow; }
 
 	private:
 		unsigned int m_width, m_height;
@@ -51,7 +51,7 @@ namespace Core
 		virtual EventType getEventType() const override { return getStaticType(); }
 		virtual const char* getName() const override { return "WindowFocusEvent"; }
 
-		virtual uint8_t getCategoryFlags() const override { return EventCategory::Window; }
+		virtual uint8_t getCategoryFlags() const override { return EventCategory::EventWindow; }
 	};
 
 
@@ -63,7 +63,7 @@ namespace Core
 		virtual EventType getEventType() const override { return getStaticType(); }
 		virtual const char* getName() const override { return "WindowLostFocusEvent"; }
 
-		virtual uint8_t getCategoryFlags() const override { return EventCategory::Window; }
+		virtual uint8_t getCategoryFlags() const override { return EventCategory::EventWindow; }
 	};
 
 
@@ -75,6 +75,6 @@ namespace Core
 		virtual EventType getEventType() const override { return getStaticType(); }
 		virtual const char* getName() const override { return "WindowMovedEvent"; }
 
-		virtual uint8_t getCategoryFlags() const override { return EventCategory::Window; }
+		virtual uint8_t getCategoryFlags() const override { return EventCategory::EventWindow; }
 	};
 }

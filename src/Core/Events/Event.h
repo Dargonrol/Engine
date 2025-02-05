@@ -17,11 +17,11 @@ namespace Core
 	enum EventCategory : uint8_t
 	{
 		None		= 0b00000,
-		Window		= 0b00001,
-		Input		= 0b00010,
-		Keyboard	= 0b00100,
-		Mouse		= 0b01000,
-		MouseButton	= 0b10000
+		EventWindow		= 0b00001,
+		EventInput		= 0b00010,
+		EventKeyboard	= 0b00100,
+		EventMouse		= 0b01000,
+		EventMouseButton	= 0b10000
 	};
 
 

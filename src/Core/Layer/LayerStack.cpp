@@ -16,23 +16,27 @@ namespace Core
 	{
 		m_layers.emplace(m_layers.begin() + m_layerInsertIndex3D, layer);
 		m_layerInsertIndex3D++;
+		layer->onAttach();
 	}
 
 	void LayerStack::pushLayer2D(Layer* layer)
 	{
 		m_layers.emplace(m_layers.begin() + m_layerInsertIndex3D + m_layerInsertIndex2D, layer);
 		m_layerInsertIndex2D++;
+		layer->onAttach();
 	}
 
 	void LayerStack::pushLayerUI(Layer* layer)
 	{
 		m_layers.emplace(m_layers.begin() + m_layerInsertIndex3D + m_layerInsertIndex2D + m_layerInsertIndexUI, layer);
 		m_layerInsertIndexUI++;
+		layer->onAttach();
 	}
 
 	void LayerStack::pushLayerDEBUG(Layer* layer)
 	{
 		m_layers.emplace_back(layer);
+		layer->onAttach();
 	}
 
 	void LayerStack::popLayer3D(Layer* layer)

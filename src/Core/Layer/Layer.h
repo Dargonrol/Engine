@@ -4,13 +4,13 @@
 
 namespace Core
 {
-	class Layer
+	class CORE_API Layer
 	{
 	public:
 		Layer(const std::string& name = "Layer") : m_name(name) {}
 		virtual ~Layer() = default;
 
-		virtual void onAttack();
+		virtual void onAttach();
 		virtual void onDetach();
 		virtual void onUpdate() {} // deltatime??
 		virtual void onEvent(Event& event) {}
@@ -19,6 +19,12 @@ namespace Core
 
 	private:
 		std::string m_name;
+
+	public:
+		bool operator==(const Layer& other) const
+		{
+			return m_name == other.m_name;
+		}
 	};
 }
 

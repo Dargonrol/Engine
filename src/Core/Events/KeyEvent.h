@@ -12,7 +12,7 @@ namespace Core
 	public:
 		KeyCode getKeyCode() const { return m_KeyCode; }
 
-		virtual uint8_t getCategoryFlags() const override { return EventCategory::Keyboard | EventCategory::Input; }
+		virtual uint8_t getCategoryFlags() const override { return EventCategory::EventKeyboard | EventCategory::EventInput; }
 
 	protected:
 		KeyEvent(const KeyCode keyCode) : m_KeyCode(keyCode) {}
